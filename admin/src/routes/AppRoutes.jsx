@@ -5,7 +5,7 @@ import MainLayout from "../layouts/MainLayout";
 import AuthLayout from "../layouts/AuthLayout";
 import ProtectedRoute from "./ProtectedRoutes";
 
-import AddProduct from "../pages/AddProduct";
+import AddProduct from "../pages/Product/AddProduct";
 
 // Lazy pages
 const Home = lazy(() => import("../pages/Home"));

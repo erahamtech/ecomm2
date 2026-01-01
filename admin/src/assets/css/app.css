@@ -341,7 +341,7 @@ label {
 }
 
 .uppy-Dashboard-inner {
-    background-color: var(--bs-secondary-bg);
+    background-color: #fff !important;
     border: 1px solid var(--bs-border-color);
     height: 250px !important
 }
@@ -368,11 +368,18 @@ label {
 }
 
 .uppy-StatusBar.is-waiting .uppy-StatusBar-actions {
-    background-color: var(--bs-card-bg)
+    background-color: #fff !important;
 }
 
 .uppy-StatusBar:not([aria-hidden=true]).is-waiting {
     border-top: 1px solid var(--bs-border-color)
+}
+.uppy-StatusBar-actionBtn--upload {
+    background-color: #6f6af8 !important;
+    box-shadow: none !important;
+}
+.uppy-StatusBar-actionBtn--upload:hover {
+    background-color: #5e5ad3 !important;
 }
 
 .uppy-Dashboard-Item-name,
@@ -382,7 +389,7 @@ label {
 
 .uppy-DashboardContent-bar,
 .uppy-StatusBar {
-    background-color: var(--bs-card-bg);
+    background-color: #fff !important;
     border-bottom: 1px solid var(--bs-border-color)
 }
 
