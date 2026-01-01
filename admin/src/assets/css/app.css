@@ -486,6 +486,9 @@ input.add-file-input {
     color: var(--bs-dropdown-link-color);
     background-color: transparent
 }
+.selectr-placeholder {
+    color: #96a0c6 !important;
+}
 
 .selectr-option.selected {
     background-color: var(--bs-tertiary-bg)

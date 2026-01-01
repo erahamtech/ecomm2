@@ -1,15 +1,19 @@
 import { lazy, Suspense, useState } from "react"
-const ProductTab = lazy(() => import('./ProductTab'))
+
+const Product = lazy(() => import('./ProductTab'))
 const Gallery = lazy(() => import('./Gallery'))
+const StockManagement = lazy(() => import('./StockManagement'))
+const Shipping_Taxes = lazy(() => import('./Shipping&Taxes'))
+const Advance = lazy(() => import('./AdvanceTab'))
 
 export default () => {
-    const [activeTab, setActiveTab] = useState(1)
+    const [activeTab, setActiveTab] = useState(0)
     const tabs = [
-        { name: "Product Details", selected: true, component: <ProductTab /> },
+        { name: "Product Details", selected: true, component: <Product /> },
         { name: "Gallery", index: -1, selected: false, component: <Gallery /> },
-        { name: "Stock Management", index: -1, selected: false },
-        { name: "Attributes & Taxes", index: -1, selected: false },
-        { name: "Variants", index: -1, selected: false },
+        { name: "Inventory", index: -1, selected: false, component: <StockManagement /> },
+        { name: "Shipping & Taxes", index: -1, selected: false, component: <Shipping_Taxes /> },
+        { name: "Advanced", index: -1, selected: false, component: <Advance /> },
     ]
 
     return (

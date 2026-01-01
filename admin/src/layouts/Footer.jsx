@@ -11,7 +11,7 @@ export default function Footer() {
                                     <span className="text-muted d-none d-sm-inline-block float-end">
                                         Design with
                                         <i className="iconoir-heart-solid text-danger align-middle" />
-                                        by Mannatthemes
+                                        by Eraham Tech Pvt Ltd
                                     </span>
                                 </p>
                             </div>
