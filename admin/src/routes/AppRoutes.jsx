@@ -14,6 +14,7 @@ const Dashboard = lazy(() => import("../pages/Dashboard"));
 const Users = lazy(() => import("../pages/Users"));
 const Products = lazy(() => import("../pages/Products"));
 const NotFound = lazy(() => import("../pages/NotFound"));
+const Customers = lazy(() => import("../pages/Customers"))
 
 export default function AppRoutes() {
   return (
@@ -37,6 +38,7 @@ export default function AppRoutes() {
             <Route path="/users" element={<Users />} />
             <Route path="/products" element={<Products />} />
             <Route path="/new-product" element={<AddProduct />} />
+            <Route path="/customers" element={<Customers/>} />
           </Route>
         </Route>
 

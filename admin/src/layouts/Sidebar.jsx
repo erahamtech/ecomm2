@@ -18,6 +18,12 @@ export default function Sidebar() {
             route: '/products',
             isCollapsed: false
         },
+         {
+            name: 'Customers',
+            icon: <i className="iconoir-report-columns menu-icon" />,
+            route: '/customers',
+            isCollapsed: false
+        },
         {
             name: 'Ecommerce',
             icon: <i className="iconoir-cart-alt menu-icon" />,
