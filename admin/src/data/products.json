@@ -1,0 +1,50 @@
+[
+  {
+    "_id": "1",
+    "title": "Apple Watch",
+    "brand": "Apple",
+    "category": { "name": "Sports" },
+    "subcategory": { "name": "Wearables" },
+    "totalStock": 32,
+    "price": 39,
+    "isActive": true,
+    "images": ["/assets/images/products/04.png"],
+    "createdAt": "2024-01-14T10:30:00"
+  },
+  {
+    "_id": "2",
+    "title": "Modern Chair",
+    "brand": "Ikea",
+    "category": { "name": "Interior" },
+    "subcategory": { "name": "Furniture" },
+    "totalStock": 10,
+    "price": 99,
+    "isActive": true,
+    "images": ["/assets/images/products/01.png"],
+    "createdAt": "2024-01-18T12:10:00"
+  },
+  {
+    "_id": "3",
+    "title": "Reebok Shoes",
+    "brand": "Reebok",
+    "category": { "name": "Footwear" },
+    "subcategory": { "name": "Shoes" },
+    "totalStock": 24,
+    "price": 49,
+    "isActive": false,
+    "images": ["/assets/images/products/05.png"],
+    "createdAt": "2024-01-24T21:10:00"
+  },
+  {
+    "_id": "4",
+    "title": "Royal Purse",
+    "brand": "LeatherCraft",
+    "category": { "name": "Lifestyle" },
+    "subcategory": { "name": "Bags" },
+    "totalStock": 52,
+    "price": 89,
+    "isActive": true,
+    "images": ["/assets/images/products/04.png"],
+    "createdAt": "2024-02-20T11:30:00"
+  }
+]
