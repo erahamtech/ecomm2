@@ -1,0 +1,56 @@
+[
+  {
+    "id": "brand_001",
+    "logo": "https://picsum.photos/seed/apple/300/200",
+    "name": "Apple",
+    "slug": "apple",
+    "description": "Premium consumer electronics and software products.",
+    "counts": 58,
+    "status": "active"
+  },
+  {
+    "id": "brand_002",
+    "logo": "https://picsum.photos/seed/samsung/300/200",
+    "name": "Samsung",
+    "slug": "samsung",
+    "description": "Global leader in electronics, smartphones, and home appliances.",
+    "counts": 76,
+    "status": "active"
+  },
+  {
+    "id": "brand_003",
+    "logo": "https://picsum.photos/seed/nike/300/200",
+    "name": "Nike",
+    "slug": "nike",
+    "description": "World-renowned sportswear, footwear, and athletic equipment brand.",
+    "counts": 112,
+    "status": "active"
+  },
+  {
+    "id": "brand_004",
+    "logo": "https://picsum.photos/seed/adidas/300/200",
+    "name": "Adidas",
+    "slug": "adidas",
+    "description": "Innovative sportswear, shoes, and lifestyle products.",
+    "counts": 98,
+    "status": "active"
+  },
+  {
+    "id": "brand_005",
+    "logo": "https://picsum.photos/seed/sony/300/200",
+    "name": "Sony",
+    "slug": "sony",
+    "description": "Electronics, gaming, entertainment, and audio-visual solutions.",
+    "counts": 64,
+    "status": "inactive"
+  },
+  {
+    "id": "brand_006",
+    "logo": "https://picsum.photos/seed/puma/300/200",
+    "name": "Puma",
+    "slug": "puma",
+    "description": "Sport-inspired lifestyle products and performance gear.",
+    "counts": 45,
+    "status": "active"
+  }
+]

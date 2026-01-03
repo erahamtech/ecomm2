@@ -23,7 +23,7 @@ export default () => {
                     <div className="col mb-3">
                         <h4 className="card-title fs-4">Add New Product</h4>
                     </div>
-                    <div className="col-lg-6 col-md-12">
+                    <div className="col-xl-7 col-lg-8 col-md-12 col-sm-12">
                         <div className="card">
                             <div className="card-header">
                                 <nav>

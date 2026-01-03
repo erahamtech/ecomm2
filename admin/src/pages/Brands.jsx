@@ -1,34 +1,20 @@
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useState } from "react";
 import { Link } from "react-router-dom";
 
-import Table, { TableActions } from "../../components/Table";
-import Loader from "../../components/Loader";
+import Table, { TableActions } from "../components/Table";
 
-import customersData from "../../data/customers.json";
-import DefaultAvatar from "../../assets/images/users/avatar-1.jpg";
+import brandsData from "../data/brands.json";
+import DefaultAvatar from "../assets/images/users/avatar-1.jpg";
 
-export default function Customers() {
-    const [customers, setCustomers] = useState([]);
-    const [loading, setLoading] = useState(false);
+export default () => {
+    const [brands, setBrands] = useState(brandsData);
 
-    useEffect(() => {
-        setLoading(true);
-        setTimeout(() => {
-            setCustomers(customersData);
-            setLoading(false);
-        }, 300);
-    }, []);
 
-    //    STATUS BADGE
+
     const getStatusBadge = (status) => {
         const map = {
-            VIP: "bg-danger-subtle text-danger",
-            Loyal: "bg-success-subtle text-success",
-            New: "bg-success-subtle text-success",
-            Repeat: "bg-primary-subtle text-primary",
-            Referral: "bg-success-subtle text-success",
-            Inactive: "bg-secondary-subtle text-secondary",
-            Potential: "bg-warning-subtle text-warning"
+            inactive: "bg-danger-subtle text-danger",
+            active: "bg-success-subtle text-success",
         };
 
         return (
@@ -38,12 +24,13 @@ export default function Customers() {
         );
     };
 
+
     /* =========================
        TABLE ROW
     ========================= */
-    const renderRow = useCallback((customer, index) => {
+    const renderRow = useCallback((brand, index) => {
         return (
-            <tr key={customer._id}>
+            <tr key={brand.id}>
                 <td>
                     <input
                         type="checkbox"
@@ -53,51 +40,47 @@ export default function Customers() {
                 </td>
 
                 <td className="ps-0">
-                    <div className="d-flex align-items-center gap-2">
-                        <img
-                            src={ DefaultAvatar}
-                            alt={customer.name}
-                            className="thumb-md rounded-circle"
-                        />
-                        <span className="fw-medium">{customer.name}</span>
-                    </div>
+                     <img
+                        src={DefaultAvatar || brand.image }
+                        alt=""
+                        height={40}
+                        className="rounded me-1"
+                    />
+                    <p className="d-inline-block align-middle mb-0">
+                        <span className="product-name fw-semibold">
+                            { brand.name }
+                        </span>
+                        <br />
+                        <span className="text-muted font-13">
+                            {brand.slug || "—"}
+                        </span>
+                    </p>
                 </td>
 
                 <td>
-                    <a
-                        href={`mailto:${customer.email}`}
-                        className="text-body"
-                    >
-                        {customer.email}
-                    </a>
+                    {brand.description}
                 </td>
 
                 <td>
-                    <a
-                        href={`tel:${customer.phone}`}
-                        className="text-body text-decoration-none"
-                    >
-                        {customer.phone}
-                    </a>
+                    <span className={`badge bg-primary-subtle text-primary`}>
+                        { brand.counts }
+                    </span>
                 </td>
 
-
-                <td>{getStatusBadge(customer.status)}</td>
-
-                <td>{customer.orders}</td>
-
-                <td>${customer.spent}</td>
+                <td>
+                    { getStatusBadge(brand.status) }
+                </td>
 
                 <TableActions>
                     <Link
-                        to={`/customer/${customer._id}`}
+                        to={`/customer/${brand._id}`}
                         className="dropdown-item"
                     >
                         View Details
                     </Link>
 
                     <Link
-                        to={`/edit-customer/${customer._id}`}
+                        to={`/edit-customer/${brand._id}`}
                         className="dropdown-item"
                     >
                         Edit
@@ -125,7 +108,7 @@ export default function Customers() {
                                 <div className="row align-items-center">
                                     <div className="col">
                                         <h4 className="card-title fs-4">
-                                            Customers
+                                            Brands
                                         </h4>
                                     </div>
 
@@ -178,16 +161,6 @@ export default function Customers() {
                                                     </div>
                                                 </div>
                                             </div>
-
-                                            {/* <div className="col-auto">
-                                                <Link
-                                                    to="/new-customer"
-                                                    className="btn btn-primary"
-                                                >
-                                                    <i className="fa-solid fa-plus me-1" />
-                                                    Add Customer
-                                                </Link>
-                                            </div> */}
                                         </form>
                                     </div>
                                 </div>
@@ -197,18 +170,16 @@ export default function Customers() {
                             <div className="card-body pt-0">
                                 <Table
                                     columns={[
-                                        { label: "Customer", className: "ps-0" },
-                                        { label: "Email" },
-                                        { label: "Phone" },
+                                        { label: "Brand", className: "ps-0" },
+                                        { label: "Description" },
+                                        { label: "Counts" },
                                         { label: "Status" },
-                                        { label: "Orders" },
-                                        { label: "Spent" },
                                         {
                                             label: "Action",
                                             className: "text-end"
                                         }
                                     ]}
-                                    data={customers}
+                                    data={brands}
                                     renderRow={renderRow}
                                     selectable
                                 />

@@ -1,0 +1,112 @@
+[
+  {
+    "id": "cat_001",
+    "parentId": null,
+    "image": "https://picsum.photos/seed/electronics/400/300",
+    "name": "Electronics",
+    "slug": "electronics",
+    "description": "Devices, gadgets, and electronic accessories.",
+    "counts": 128
+  },
+  {
+    "id": "sub_001",
+    "parentId": "cat_001",
+    "image": null,
+    "name": "Mobiles",
+    "slug": "mobiles",
+    "description": "Smartphones and mobile accessories.",
+    "counts": 42
+  },
+  {
+    "id": "sub_002",
+    "parentId": "cat_001",
+    "image": null,
+    "name": "Laptops",
+    "slug": "laptops",
+    "description": "Personal and professional laptops.",
+    "counts": 36
+  },
+  {
+    "id": "sub_003",
+    "parentId": "cat_001",
+    "image": null,
+    "name": "Audio Devices",
+    "slug": "audio-devices",
+    "description": "Headphones, earphones, and speakers.",
+    "counts": 50
+  },
+
+  {
+    "id": "cat_002",
+    "parentId": null,
+    "image": "https://picsum.photos/seed/fashion/400/300",
+    "name": "Fashion",
+    "slug": "fashion",
+    "description": "Clothing, footwear, and accessories.",
+    "counts": 342
+  },
+  {
+    "id": "sub_004",
+    "parentId": "cat_002",
+    "image": null,
+    "name": "Men",
+    "slug": "men-fashion",
+    "description": "Men's clothing and accessories.",
+    "counts": 120
+  },
+  {
+    "id": "sub_005",
+    "parentId": "cat_002",
+    "image": null,
+    "name": "Women",
+    "slug": "women-fashion",
+    "description": "Women's clothing and accessories.",
+    "counts": 150
+  },
+  {
+    "id": "sub_006",
+    "parentId": "cat_002",
+    "image": null,
+    "name": "Kids",
+    "slug": "kids-fashion",
+    "description": "Kids clothing and accessories.",
+    "counts": 72
+  },
+
+  {
+    "id": "cat_003",
+    "parentId": null,
+    "image": "https://picsum.photos/seed/home/400/300",
+    "name": "Home & Kitchen",
+    "slug": "home-kitchen",
+    "description": "Home appliances, furniture, and decor.",
+    "counts": 210
+  },
+  {
+    "id": "sub_007",
+    "parentId": "cat_003",
+    "image": null,
+    "name": "Kitchen Appliances",
+    "slug": "kitchen-appliances",
+    "description": "Mixers, ovens, and cooking appliances.",
+    "counts": 85
+  },
+  {
+    "id": "sub_008",
+    "parentId": "cat_003",
+    "image": null,
+    "name": "Furniture",
+    "slug": "furniture",
+    "description": "Beds, sofas, tables, and chairs.",
+    "counts": 65
+  },
+  {
+    "id": "sub_009",
+    "parentId": "cat_003",
+    "image": null,
+    "name": "Home Decor",
+    "slug": "home-decor",
+    "description": "Wall art, lighting, and decor items.",
+    "counts": 60
+  }
+]

@@ -12,31 +12,70 @@ export default function Sidebar() {
             route: '/dashboard',
             isCollapsed: false
         },
-         {
+        {
             name: 'Products',
             icon: <i className="iconoir-report-columns menu-icon" />,
             route: '/products',
             isCollapsed: false
         },
-         {
+        {
+            name: 'Orders',
+            icon: <i className="iconoir-report-columns menu-icon" />,
+            route: '/orders',
+            isCollapsed: false
+        },
+
+        {
+            name: 'Category',
+            icon: <i className="iconoir-cart-alt menu-icon" />,
+            route: '/category',
+            isCollapsed: false
+        },
+
+        {
+            name: 'Category',
+            icon: <i className="iconoir-cart-alt menu-icon" />,
+            isCollapsed: true,
+            nestedItems: [
+                {
+                    name: 'Category',
+                    icon: <i className="iconoir-report-columns menu-icon" />,
+                    route: '/category',
+                    isCollapsed: false
+                },
+                {
+                    name: 'Sub Category',
+                    icon: <i className="iconoir-report-columns menu-icon" />,
+                    route: '/sub-category',
+                    isCollapsed: false
+                },
+            ]
+        },
+        {
             name: 'Customers',
             icon: <i className="iconoir-report-columns menu-icon" />,
             route: '/customers',
             isCollapsed: false
         },
         {
-            name: 'Ecommerce',
-            icon: <i className="iconoir-cart-alt menu-icon" />,
-            isCollapsed: true,
-            nestedItems: [
-                {
-                    name: 'Dashboard',
-                    icon: <i className="iconoir-report-columns menu-icon" />,
-                    route: '/dashboard',
-                    isCollapsed: false
-                },
-            ]
+            name: 'Brands',
+            icon: <i className="iconoir-report-columns menu-icon" />,
+            route: '/brand',
+            isCollapsed: false
         },
+        {
+            name: 'Tags',
+            icon: <i className="iconoir-report-columns menu-icon" />,
+            route: '/tags',
+            isCollapsed: false
+        },
+        {
+            name: 'Attributes',
+            icon: <i className="iconoir-report-columns menu-icon" />,
+            route: '/attributes',
+            isCollapsed: false
+        },
+
     ]
 
 
@@ -66,55 +105,61 @@ export default function Sidebar() {
                     </span>
                 </a>
             </div>
-        
+
             <div className="startbar-menu">
                 <div className="startbar-collapse" id="startbarCollapse">
                     <div className="d-flex align-items-start flex-column w-100">
-                     
+
                         {/* Navigation */}
                         <ul className="navbar-nav mb-auto w-100">
                             {
-                                sidebarItems.map( item => {
-                                    if( item?.isLabel ) { return (
-                                        <li className="menu-label mt-2">
-                                            <span>{ item.name }</span>
-                                        </li>
-                                    )} else if ( !item?.isCollapsed ) {  return(
-                                        <NavLink to={item.route} className="nav-item">
-                                            <NavLink to={item.route}  className="nav-link" >
-                                                { item.icon }
-                                                <span>{ item.name }</span>
-                                                {/* <span className="badge text-bg-warning ms-auto">08</span> */}
-                                            </NavLink >
-                                        </NavLink>
-                                    )} else { return (
-                                        <li className="nav-item">
-                                            <a
-                                                className="nav-link"
-                                                href="#sidebarAnalytics"
-                                                data-bs-toggle="collapse"
-                                                role="button"
-                                                aria-expanded="false"
-                                                aria-controls="sidebarAnalytics"
-                                            >
-                                                { item?.icon }
-                                                <span>{ item?.name }</span>
-                                            </a>
-                                            <div className="collapse " id="sidebarAnalytics">
-                                                <ul className="nav flex-column">
-                                                    {
-                                                        item?.nestedItems?.map( nestedItem => 
-                                                            <li className="nav-item">
-                                                                <NavLink to={nestedItem?.route} className="nav-link ">
-                                                                    { nestedItem?.name }
-                                                                </NavLink>
-                                                            </li>
-                                                        )
-                                                    }
-                                                </ul>
-                                            </div>
-                                        </li>
-                                    )}
+                                sidebarItems.map(item => {
+                                    if (item?.isLabel) {
+                                        return (
+                                            <li className="menu-label mt-2">
+                                                <span>{item.name}</span>
+                                            </li>
+                                        )
+                                    } else if (!item?.isCollapsed) {
+                                        return (
+                                            <NavLink to={item.route} className="nav-item">
+                                                <NavLink to={item.route} className="nav-link" >
+                                                    {item.icon}
+                                                    <span>{item.name}</span>
+                                                    {/* <span className="badge text-bg-warning ms-auto">08</span> */}
+                                                </NavLink >
+                                            </NavLink>
+                                        )
+                                    } else {
+                                        return (
+                                            <li className="nav-item">
+                                                <a
+                                                    className="nav-link"
+                                                    href="#sidebarAnalytics"
+                                                    data-bs-toggle="collapse"
+                                                    role="button"
+                                                    aria-expanded="false"
+                                                    aria-controls="sidebarAnalytics"
+                                                >
+                                                    {item?.icon}
+                                                    <span>{item?.name}</span>
+                                                </a>
+                                                <div className="collapse " id="sidebarAnalytics">
+                                                    <ul className="nav flex-column">
+                                                        {
+                                                            item?.nestedItems?.map(nestedItem =>
+                                                                <li className="nav-item">
+                                                                    <NavLink to={nestedItem?.route} className="nav-link ">
+                                                                        {nestedItem?.name}
+                                                                    </NavLink>
+                                                                </li>
+                                                            )
+                                                        }
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                        )
+                                    }
                                 })
                             }
                             {/*End Navigation*/}
