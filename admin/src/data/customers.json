@@ -2,121 +2,312 @@
   {
     "_id": "1",
     "name": "Andy Timmons",
+    "username": "@andy",
     "email": "dummy@dummy.com",
     "phone": "+5478964785",
+    "altPhone": "+5478964701",
+    "address": "221B Baker Street, London, UK",
+    "altAddress": "45 King Street, Manchester, UK",
     "status": "VIP",
-    "orders": 75,
-    "spent": 280,
-    "avatar": "/assets/images/users/avatar-2.jpg"
+    "avatar": "/assets/images/users/avatar-2.jpg",
+    "stats": {
+      "totalCost": 2350,
+      "totalOrders": 4,
+      "completed": 3,
+      "canceled": 1,
+      "period": "365 Days"
+    },
+    "orders": [
+      { "id": "#632536", "product": "Bata Shoes", "meta": "size-08 (2024)", "date": "15/08/2023", "payment": "UPI", "status": "Completed", "price": 390 },
+      { "id": "#365485", "product": "Modern Chair", "meta": "Medium", "date": "22/09/2023", "payment": "Banking", "status": "Completed", "price": 630 },
+      { "id": "#325415", "product": "Reebok Shoes", "meta": "size-08", "date": "31/12/2023", "payment": "Paypal", "status": "Canceled", "price": 450 },
+      { "id": "#546987", "product": "Cosco Volleyball", "meta": "size-04", "date": "05/01/2024", "payment": "UPI", "status": "Completed", "price": 880 }
+    ]
   },
+
   {
     "_id": "2",
     "name": "Jeff Beck",
+    "username": "@jeff",
     "email": "fake@dummy.com",
     "phone": "+5478964786",
+    "altPhone": "+5478964702",
+    "address": "12 Sunset Blvd, LA, USA",
+    "altAddress": "88 Hollywood Ave, LA, USA",
     "status": "Loyal",
-    "orders": 65,
-    "spent": 150,
-    "avatar": "/assets/images/users/avatar-3.jpg"
+    "avatar": "/assets/images/users/avatar-3.jpg",
+    "stats": {
+      "totalCost": 1780,
+      "totalOrders": 4,
+      "completed": 4,
+      "canceled": 0,
+      "period": "365 Days"
+    },
+    "orders": [
+      { "id": "#745236", "product": "Apple Watch", "meta": "Series 8", "date": "10/07/2023", "payment": "Card", "status": "Completed", "price": 520 },
+      { "id": "#745237", "product": "iPhone Case", "meta": "Leather", "date": "18/08/2023", "payment": "UPI", "status": "Completed", "price": 120 },
+      { "id": "#745238", "product": "AirPods", "meta": "Pro Gen 2", "date": "01/11/2023", "payment": "Card", "status": "Completed", "price": 620 },
+      { "id": "#745239", "product": "Charging Stand", "meta": "Fast Charge", "date": "10/01/2024", "payment": "UPI", "status": "Completed", "price": 520 }
+    ]
   },
+
   {
     "_id": "3",
     "name": "Vince Nelson",
+    "username": "@vince",
     "email": "example@dummy.com",
     "phone": "+5478964787",
+    "altPhone": "+5478964703",
+    "address": "77 Oxford Street, London, UK",
+    "altAddress": "19 Regent Street, London, UK",
     "status": "Referral",
-    "orders": 32,
-    "spent": 39,
-    "avatar": "/assets/images/users/avatar-4.jpg"
+    "avatar": "/assets/images/users/avatar-4.jpg",
+    "stats": {
+      "totalCost": 980,
+      "totalOrders": 4,
+      "completed": 3,
+      "canceled": 1,
+      "period": "365 Days"
+    },
+    "orders": [
+      { "id": "#889120", "product": "Nike Cap", "meta": "Black", "date": "03/06/2023", "payment": "UPI", "status": "Completed", "price": 120 },
+      { "id": "#889121", "product": "Gym Bottle", "meta": "Steel", "date": "12/07/2023", "payment": "UPI", "status": "Completed", "price": 90 },
+      { "id": "#889122", "product": "Running Shoes", "meta": "Size-9", "date": "21/10/2023", "payment": "Paypal", "status": "Canceled", "price": 320 },
+      { "id": "#889123", "product": "Sports Bag", "meta": "Medium", "date": "14/01/2024", "payment": "Card", "status": "Completed", "price": 450 }
+    ]
   },
+
   {
     "_id": "4",
     "name": "David Gilmour",
+    "username": "@david",
     "email": "only@dummy.com",
     "phone": "+5478964788",
+    "altPhone": "+5478964704",
+    "address": "5 Abbey Road, London, UK",
+    "altAddress": "101 Camden Street, London, UK",
     "status": "Inactive",
-    "orders": 40,
-    "spent": 170,
-    "avatar": "/assets/images/users/avatar-5.jpg"
+    "avatar": "/assets/images/users/avatar-5.jpg",
+    "stats": {
+      "totalCost": 2100,
+      "totalOrders": 4,
+      "completed": 2,
+      "canceled": 2,
+      "period": "365 Days"
+    },
+    "orders": [
+      { "id": "#556210", "product": "Office Desk", "meta": "Wood", "date": "10/05/2023", "payment": "Banking", "status": "Completed", "price": 950 },
+      { "id": "#556211", "product": "Desk Lamp", "meta": "LED", "date": "19/06/2023", "payment": "UPI", "status": "Completed", "price": 150 },
+      { "id": "#556212", "product": "Office Chair", "meta": "Ergo", "date": "02/09/2023", "payment": "Card", "status": "Canceled", "price": 550 },
+      { "id": "#556213", "product": "Foot Rest", "meta": "Plastic", "date": "11/11/2023", "payment": "UPI", "status": "Canceled", "price": 450 }
+    ]
   },
+
   {
     "_id": "5",
     "name": "Dianna Smiley",
+    "username": "@dianna",
     "email": "dummy@example.com",
     "phone": "+5478964789",
+    "altPhone": "+5478964705",
+    "address": "9 Queen Street, Toronto, Canada",
+    "altAddress": "55 King Road, Toronto, Canada",
     "status": "Repeat",
-    "orders": 80,
-    "spent": 220,
-    "avatar": "/assets/images/users/avatar-6.jpg"
+    "avatar": "/assets/images/users/avatar-6.jpg",
+    "stats": {
+      "totalCost": 1890,
+      "totalOrders": 4,
+      "completed": 4,
+      "canceled": 0,
+      "period": "365 Days"
+    },
+    "orders": [
+      { "id": "#774512", "product": "Leather Bag", "meta": "Brown", "date": "11/11/2023", "payment": "Card", "status": "Completed", "price": 520 },
+      { "id": "#774513", "product": "Wallet", "meta": "Genuine Leather", "date": "02/12/2023", "payment": "UPI", "status": "Completed", "price": 220 },
+      { "id": "#774514", "product": "Sunglasses", "meta": "UV Protected", "date": "18/12/2023", "payment": "Card", "status": "Completed", "price": 350 },
+      { "id": "#774515", "product": "Watch Strap", "meta": "Leather", "date": "07/01/2024", "payment": "UPI", "status": "Completed", "price": 800 }
+    ]
   },
+
   {
     "_id": "6",
     "name": "Adolfo Hess",
+    "username": "@adolfo",
     "email": "dummy2dummy@dummy.com",
     "phone": "+5478964790",
+    "altPhone": "+5478964706",
+    "address": "14 Silicon Valley, CA, USA",
+    "altAddress": "99 Market Street, CA, USA",
     "status": "New",
-    "orders": 45,
-    "spent": 120,
-    "avatar": "/assets/images/users/avatar-7.jpg"
+    "avatar": "/assets/images/users/avatar-7.jpg",
+    "stats": {
+      "totalCost": 1340,
+      "totalOrders": 4,
+      "completed": 3,
+      "canceled": 1,
+      "period": "365 Days"
+    },
+    "orders": [
+      { "id": "#664213", "product": "Bluetooth Speaker", "meta": "Waterproof", "date": "08/01/2024", "payment": "UPI", "status": "Completed", "price": 340 },
+      { "id": "#664214", "product": "Power Bank", "meta": "20000mAh", "date": "12/01/2024", "payment": "Card", "status": "Completed", "price": 420 },
+      { "id": "#664215", "product": "USB Hub", "meta": "Type-C", "date": "20/01/2024", "payment": "UPI", "status": "Canceled", "price": 180 },
+      { "id": "#664216", "product": "Wireless Mouse", "meta": "Silent Click", "date": "25/01/2024", "payment": "UPI", "status": "Completed", "price": 400 }
+    ]
   },
+
   {
     "_id": "7",
     "name": "James Ahern",
+    "username": "@james",
     "email": "dummy10@dummy.com",
     "phone": "+5478964791",
+    "altPhone": "+5478964707",
+    "address": "77 Broadway, New York, USA",
+    "altAddress": "21 Wall Street, NY, USA",
     "status": "Repeat",
-    "orders": 88,
-    "spent": 580,
-    "avatar": "/assets/images/users/avatar-8.jpg"
+    "avatar": "/assets/images/users/avatar-8.jpg",
+    "stats": {
+      "totalCost": 2420,
+      "totalOrders": 4,
+      "completed": 4,
+      "canceled": 0,
+      "period": "365 Days"
+    },
+    "orders": [
+      { "id": "#990001", "product": "Gaming Keyboard", "meta": "RGB", "date": "10/06/2023", "payment": "Card", "status": "Completed", "price": 620 },
+      { "id": "#990002", "product": "Gaming Mouse", "meta": "DPI 16000", "date": "22/07/2023", "payment": "UPI", "status": "Completed", "price": 420 },
+      { "id": "#990003", "product": "Monitor", "meta": "144Hz", "date": "14/10/2023", "payment": "Banking", "status": "Completed", "price": 780 },
+      { "id": "#990004", "product": "Headset", "meta": "Surround", "date": "09/01/2024", "payment": "Card", "status": "Completed", "price": 600 }
+    ]
   },
+
   {
     "_id": "8",
     "name": "Simon Young",
+    "username": "@simon",
     "email": "totaldummy@dummy.com",
     "phone": "+5478964792",
+    "altPhone": "+5478964708",
+    "address": "88 George Street, Sydney, Australia",
+    "altAddress": "12 Opera House Rd, Sydney",
     "status": "VIP",
-    "orders": 124,
-    "spent": 380,
-    "avatar": "/assets/images/users/avatar-9.jpg"
+    "avatar": "/assets/images/users/avatar-9.jpg",
+    "stats": {
+      "totalCost": 3180,
+      "totalOrders": 4,
+      "completed": 3,
+      "canceled": 1,
+      "period": "365 Days"
+    },
+    "orders": [
+      { "id": "#880001", "product": "DSLR Camera", "meta": "Canon", "date": "01/06/2023", "payment": "Card", "status": "Completed", "price": 1200 },
+      { "id": "#880002", "product": "Tripod", "meta": "Carbon Fiber", "date": "15/06/2023", "payment": "UPI", "status": "Completed", "price": 320 },
+      { "id": "#880003", "product": "Camera Bag", "meta": "Waterproof", "date": "10/09/2023", "payment": "UPI", "status": "Canceled", "price": 260 },
+      { "id": "#880004", "product": "Lens", "meta": "50mm", "date": "20/12/2023", "payment": "Card", "status": "Completed", "price": 1400 }
+    ]
   },
+
   {
     "_id": "9",
     "name": "Robert Lewis",
+    "username": "@robert",
     "email": "example@dummy.com",
     "phone": "+5478964793",
+    "altPhone": "+5478964709",
+    "address": "16 Lake View Rd, Chicago, USA",
+    "altAddress": "90 Michigan Ave, Chicago",
     "status": "Inactive",
-    "orders": 84,
-    "spent": 254,
-    "avatar": "/assets/images/users/avatar-10.jpg"
+    "avatar": "/assets/images/users/avatar-10.jpg",
+    "stats": {
+      "totalCost": 1560,
+      "totalOrders": 4,
+      "completed": 2,
+      "canceled": 2,
+      "period": "365 Days"
+    },
+    "orders": [
+      { "id": "#770001", "product": "Bookshelf", "meta": "Wood", "date": "05/04/2023", "payment": "Banking", "status": "Completed", "price": 520 },
+      { "id": "#770002", "product": "Table Lamp", "meta": "LED", "date": "18/05/2023", "payment": "UPI", "status": "Completed", "price": 240 },
+      { "id": "#770003", "product": "Floor Mat", "meta": "Cotton", "date": "02/09/2023", "payment": "UPI", "status": "Canceled", "price": 300 },
+      { "id": "#770004", "product": "Wall Clock", "meta": "Vintage", "date": "28/11/2023", "payment": "Card", "status": "Canceled", "price": 500 }
+    ]
   },
+
   {
     "_id": "10",
     "name": "Erik Brim",
+    "username": "@erik",
     "email": "onlyfake@dummy.com",
     "phone": "+5478964794",
+    "altPhone": "+5478964710",
+    "address": "32 Tech Park, Berlin, Germany",
+    "altAddress": "101 Startup Lane, Berlin",
     "status": "Potential",
-    "orders": 62,
-    "spent": 225,
-    "avatar": "/assets/images/users/avatar-1.jpg"
+    "avatar": "/assets/images/users/avatar-1.jpg",
+    "stats": {
+      "totalCost": 1990,
+      "totalOrders": 4,
+      "completed": 3,
+      "canceled": 1,
+      "period": "365 Days"
+    },
+    "orders": [
+      { "id": "#660001", "product": "Laptop Stand", "meta": "Aluminum", "date": "01/06/2023", "payment": "Card", "status": "Completed", "price": 320 },
+      { "id": "#660002", "product": "Mechanical Keyboard", "meta": "Blue Switch", "date": "15/07/2023", "payment": "UPI", "status": "Completed", "price": 540 },
+      { "id": "#660003", "product": "Monitor Arm", "meta": "Adjustable", "date": "10/10/2023", "payment": "Banking", "status": "Canceled", "price": 430 },
+      { "id": "#660004", "product": "Desk Organizer", "meta": "Metal", "date": "20/12/2023", "payment": "UPI", "status": "Completed", "price": 700 }
+    ]
   },
+
   {
     "_id": "11",
     "name": "Kevin Powers",
+    "username": "@kevin",
     "email": "example@exe.com",
     "phone": "+5478964795",
+    "altPhone": "+5478964711",
+    "address": "67 Palm Street, Miami, USA",
+    "altAddress": "18 Ocean Drive, Miami",
     "status": "Repeat",
-    "orders": 54,
-    "spent": 345,
-    "avatar": "/assets/images/users/avatar-5.jpg"
+    "avatar": "/assets/images/users/avatar-5.jpg",
+    "stats": {
+      "totalCost": 2140,
+      "totalOrders": 4,
+      "completed": 4,
+      "canceled": 0,
+      "period": "365 Days"
+    },
+    "orders": [
+      { "id": "#550001", "product": "Sunglasses", "meta": "Polarized", "date": "05/06/2023", "payment": "Card", "status": "Completed", "price": 420 },
+      { "id": "#550002", "product": "Beach Chair", "meta": "Foldable", "date": "20/07/2023", "payment": "UPI", "status": "Completed", "price": 520 },
+      { "id": "#550003", "product": "Cooler Box", "meta": "Portable", "date": "15/09/2023", "payment": "UPI", "status": "Completed", "price": 600 },
+      { "id": "#550004", "product": "Bluetooth Speaker", "meta": "Bass Boost", "date": "05/01/2024", "payment": "Card", "status": "Completed", "price": 600 }
+    ]
   },
+
   {
     "_id": "12",
     "name": "Wendy Keen",
+    "username": "@wendy",
     "email": "example@dummy.com",
     "phone": "+5478964796",
+    "altPhone": "+5478964712",
+    "address": "90 Queen Road, Delhi, India",
+    "altAddress": "12 MG Road, Gurgaon, India",
     "status": "New",
-    "orders": 32,
-    "spent": 39,
-    "avatar": "/assets/images/users/avatar-3.jpg"
+    "avatar": "/assets/images/users/avatar-3.jpg",
+    "stats": {
+      "totalCost": 1240,
+      "totalOrders": 4,
+      "completed": 3,
+      "canceled": 1,
+      "period": "365 Days"
+    },
+    "orders": [
+      { "id": "#440001", "product": "Handbag", "meta": "Leather", "date": "08/08/2023", "payment": "UPI", "status": "Completed", "price": 420 },
+      { "id": "#440002", "product": "Scarf", "meta": "Silk", "date": "22/09/2023", "payment": "UPI", "status": "Completed", "price": 180 },
+      { "id": "#440003", "product": "Shoes", "meta": "Flat", "date": "10/11/2023", "payment": "Card", "status": "Canceled", "price": 260 },
+      { "id": "#440004", "product": "Watch", "meta": "Analog", "date": "03/01/2024", "payment": "Card", "status": "Completed", "price": 380 }
+    ]
   }
 ]

@@ -7,6 +7,7 @@ import ProtectedRoute from "./ProtectedRoutes";
 
 import AddProduct from "../pages/Product/AddProduct";
 import Tags from "../pages/Tags";
+import CustomerDetails from "../pages/Customers/CustomerDetails";
 
 // Lazy pages
 const Home = lazy(() => import("../pages/Home"));
@@ -14,9 +15,9 @@ const Login = lazy(() => import("../pages/Login"));
 const Dashboard = lazy(() => import("../pages/Dashboard"));
 const Users = lazy(() => import("../pages/Users"));
 const Products = lazy(() => import("../pages/Products"));
-const Customers = lazy(() => import("../pages/Customers/Customers"))
-const Category = lazy(() => import("../pages/Category"))
-const Brands = lazy(() => import("../pages/Brands"))
+const Customers = lazy(() => import("../pages/Customers/Customers"));
+const Category = lazy(() => import("../pages/Category"));
+const Brands = lazy(() => import("../pages/Brands"));
 const NotFound = lazy(() => import("../pages/NotFound"));
 
 export default function AppRoutes() {
@@ -41,15 +42,16 @@ export default function AppRoutes() {
             <Route path="/users" element={<Users />} />
             <Route path="/products" element={<Products />} />
             <Route path="/new-product" element={<AddProduct />} />
-            <Route path="/customers" element={<Customers/>} />
-            <Route path="/category" element={<Category/>} />
-            <Route path="/brand" element={<Brands/>} />
-            <Route path="/tags" element={<Tags/>} />
+            <Route path="/customers" element={<Customers />} />
+            <Route path="/customer-details/:id" element={<CustomerDetails />} />
+            <Route path="/category" element={<Category />} />
+            <Route path="/brand" element={<Brands />} />
+            <Route path="/tags" element={<Tags />} />
           </Route>
-        <Route path="*" element={<NotFound />} />
-        </Route>
 
-        {/* 404 */}
+          {/* 404 */}
+          <Route path="*" element={<NotFound />} />
+        </Route>
 
       </Routes>
     </Suspense>
