@@ -2,6 +2,7 @@ import Selectr from "mobius1-selectr";
 import { useEffect, useState } from "react";
 import { useForm } from 'react-hook-form'
 import { Text, Textarea } from '../../components/Inputs'
+import Select from "../../components/Select";
 
 export default () => {
     
@@ -45,25 +46,15 @@ export default () => {
                 },
                 theme: 'snow'
             });
+            new Quill('#highlights', {
+                modules: {
+                    toolbar: toolbarOptions
+                },
+                theme: 'snow'
+            });
         }
 
         if (!document.querySelector(".selectr-container")) {
-            new Selectr('#mySelect', {
-                placeholder: "Select Brands",
-                data: [
-                    { text: "Payjama", value: "value1" },
-                    { text: "Bata", value: "value2" },
-                ],
-                defaultSelected: false
-            });
-            new Selectr('#mySelect1', {
-                placeholder: "Attribute Templates",
-                data: [
-                    { text: "Payjama", value: "value1" },
-                    { text: "Bata", value: "value2" },
-                ],
-                defaultSelected: false
-            });
 
             new Selectr("#category", {
                 placeholder: "Categories",
@@ -93,10 +84,10 @@ export default () => {
 
             });
 
-            new Selectr("#taggableSelect", {
+            new Selectr("#attribute", {
+                placeholder: "Select Attribute",
                 taggable: !0,
                 tagSeperators: [",", "|"],
-                
                 data: [
                     { text: "S", value: "s" },
                     { text: "M", value: "m" },
@@ -149,7 +140,15 @@ export default () => {
                     Brand Name
                 </label>
                 <div className="col-sm-10">
-                    <select id="mySelect" />
+                    <Select
+                        id="brands"
+                        placeholder="Select Brands"
+                        data={[
+                            { text: "Payjama", value: "value1" },
+                            { text: "Bata", value: "value2" },
+                        ]}
+                        defaultSelected="false"
+                    />
                     <p className="text-primary text-decoration-underline mb-0 mt-2 cursor-pointer me-3">Add Brand</p>
                 </div>
                 
@@ -173,13 +172,15 @@ export default () => {
                 </div>
             </div>
 
-            
-            <Textarea
-                placeholder="Highlights"
-                rows={5}
-                errors={errors}
-                register={register('highlights', { required: "Hightlights required."})}
-            />
+
+            <div className="mb-3 row" >
+                <label className="col-sm-2 col-form-label text-end" >
+                    Highights
+                </label>
+                <div className="col-sm-10 h-100" style={{ height: "10rem"}} >
+                    <div id="highlights" className="w-100 h-100"></div>
+                </div>
+            </div>
 
             <div className="mb-3 row" >
                 <label className="col-sm-2 col-form-label text-end" >
@@ -192,7 +193,7 @@ export default () => {
 
 
             <Text 
-            type="number"
+                type="number"
                 placeholder="Regular Price"
                 errors={errors}
                 register={register('regularPrice', { required: "Regular price required." } )}
@@ -242,7 +243,15 @@ export default () => {
                 <div className="col-sm-10">
                     
                     <div className="col-sm-12 mb-0">
-                        <select id="mySelect1" />
+                        <Select
+                            id="attributes"
+                            placeholder="Attribute Templates"
+                            data={[
+                                { text: "Payjama", value: "value1" },
+                                { text: "Bata", value: "value2" },
+                            ]}
+                            defaultSelected={false}
+                        />
                     </div>
 
                     <p className="text-primary text-decoration-underline mt-2 cursor-pointer me-3 mb-3">Add Attribute Template</p>
@@ -259,7 +268,7 @@ export default () => {
                                 />
                             </div>
                             <div className="col-sm-8">
-                                <select id="taggableSelect"/>   
+                                <select id="attribute"/>   
                             </div>
                         </div>
                         <div className="col-sm-1 ">
@@ -269,33 +278,8 @@ export default () => {
                         </div>
                     </div>
 
-                    <div className="col-12 row mt-2">
-                        <div className="col-sm-11 row m-0 p-0">
-                            <div className="col-sm-4">
-                                <input
-                                    className="form-control"
-                                    type="text"
-                                    placeholder="Attribute Name"
-                                />
-                            </div>
-                            <div className="col-sm-8">
-                                <input
-                                    className="form-control"
-                                    type="text"
-                                    placeholder="Attribute Value"
-                                />   
-                            </div>
-                        </div>
-                        <div className="col-sm-1">
-                            <button type="button" className="btn btn-danger">
-                                x
-                            </button>
-                        </div>
-                    </div>
-
                     <div className="d-flex align-items-center">
                         <p className="text-primary text-decoration-underline mt-2 cursor-pointer me-3">Add Attributes</p>
-                        <p className="text-primary text-decoration-underline mt-2 cursor-pointer">Add Multi Value Attributes</p>
                     </div>
 
                 </div>

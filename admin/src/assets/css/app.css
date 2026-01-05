@@ -292,6 +292,9 @@ label {
     color: var(--bs-label-color);
     vertical-align: middle
 }
+#highlights .ql-editor {
+    min-height: 150px;
+}
 
 .ql-editor {
     min-height: 300px;
@@ -4789,4 +4792,10 @@ ul.listree-submenu-items li a {
   49.99%{transform:scaleY(1)  rotate(135deg)}
   50%   {transform:scaleY(-1) rotate(0deg)}
   100%  {transform:scaleY(-1) rotate(-135deg)}
+}
+
+.variation.card {
+    box-shadow: none;
+    border-bottom: var(--bs-card-border-width) solid var(--bs-card-border-color);
+    border-radius: 0;
 }

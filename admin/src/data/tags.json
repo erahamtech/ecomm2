@@ -4,7 +4,7 @@
     "name": "New Arrival",
     "slug": "new-arrival",
     "description": "Recently added products.",
-    "usageCount": 78,
+    "counts": 78,
     "status": "active"
   },
   {
@@ -12,7 +12,7 @@
     "name": "Best Seller",
     "slug": "best-seller",
     "description": "Top-selling products with high demand.",
-    "usageCount": 124,
+    "counts": 124,
     "status": "active"
   },
   {
@@ -20,7 +20,7 @@
     "name": "Trending",
     "slug": "trending",
     "description": "Products that are currently popular.",
-    "usageCount": 96,
+    "counts": 96,
     "status": "active"
   },
   {
@@ -28,7 +28,7 @@
     "name": "On Sale",
     "slug": "on-sale",
     "description": "Products available at discounted prices.",
-    "usageCount": 65,
+    "counts": 65,
     "status": "active"
   },
   {
@@ -36,7 +36,7 @@
     "name": "Limited Edition",
     "slug": "limited-edition",
     "description": "Products available for a short time only.",
-    "usageCount": 22,
+    "counts": 22,
     "status": "inactive"
   },
   {
@@ -44,7 +44,7 @@
     "name": "Eco Friendly",
     "slug": "eco-friendly",
     "description": "Environmentally sustainable products.",
-    "usageCount": 34,
+    "counts": 34,
     "status": "active"
   },
   {
@@ -52,7 +52,7 @@
     "name": "Premium",
     "slug": "premium",
     "description": "High-quality premium products.",
-    "usageCount": 49,
+    "counts": 49,
     "status": "active"
   },
   {
@@ -60,7 +60,7 @@
     "name": "Budget Friendly",
     "slug": "budget-friendly",
     "description": "Affordable products with great value.",
-    "usageCount": 88,
+    "counts": 88,
     "status": "active"
   }
 ]

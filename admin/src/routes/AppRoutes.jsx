@@ -5,7 +5,7 @@ import MainLayout from "../layouts/MainLayout";
 import AuthLayout from "../layouts/AuthLayout";
 import ProtectedRoute from "./ProtectedRoutes";
 
-import AddProduct from "../pages/Product/AddProduct";
+import AddNewProduct from "../pages/Product";
 import Tags from "../pages/Tags";
 import CustomerDetails from "../pages/Customers/CustomerDetails";
 
@@ -18,6 +18,7 @@ const Products = lazy(() => import("../pages/Products"));
 const Customers = lazy(() => import("../pages/Customers/Customers"));
 const Category = lazy(() => import("../pages/Category"));
 const Brands = lazy(() => import("../pages/Brands"));
+const Attributes = lazy(() => import("../pages/Attributes"));
 const NotFound = lazy(() => import("../pages/NotFound"));
 
 export default function AppRoutes() {
@@ -41,11 +42,12 @@ export default function AppRoutes() {
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/users" element={<Users />} />
             <Route path="/products" element={<Products />} />
-            <Route path="/new-product" element={<AddProduct />} />
+            <Route path="/new-product" element={<AddNewProduct />} />
             <Route path="/customers" element={<Customers />} />
             <Route path="/customer-details/:id" element={<CustomerDetails />} />
             <Route path="/category" element={<Category />} />
             <Route path="/brand" element={<Brands />} />
+            <Route path="/attributes" element={<Attributes />} />
             <Route path="/tags" element={<Tags />} />
           </Route>
 

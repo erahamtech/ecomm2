@@ -4,6 +4,7 @@ const Product = lazy(() => import('./ProductTab'))
 const Gallery = lazy(() => import('./Gallery'))
 const StockManagement = lazy(() => import('./StockManagement'))
 const Shipping_Taxes = lazy(() => import('./Shipping&Taxes'))
+const Variations = lazy(() => import('./Variations'))
 const Advance = lazy(() => import('./AdvanceTab'))
 
 export default () => {
@@ -13,6 +14,7 @@ export default () => {
         { name: "Gallery", index: -1, selected: false, component: <Gallery /> },
         { name: "Inventory", index: -1, selected: false, component: <StockManagement /> },
         { name: "Shipping & Taxes", index: -1, selected: false, component: <Shipping_Taxes /> },
+        { name: "Variations", index: -1, selected: false, component: <Variations /> },
         { name: "Advanced", index: -1, selected: false, component: <Advance /> },
     ]
 
